@@ -16,6 +16,7 @@ let RecipeCard = props => {
   const instructionsDisplay = instructions.map((instruction, i) => {
     return <li key={i}>{instruction}</li>;
   });
+
   return (
     <div className="RecipeCard">
       <div className="title_container">
@@ -34,6 +35,7 @@ let RecipeCard = props => {
         <ol className="list">{instructionsDisplay}</ol>
       </div>
       <svg
+        onClick={() => props.handleDeleteClick(props.index)}
         className="delete"
         width="60"
         height="60"
